@@ -1,11 +1,9 @@
 package Dist::Zilla::PluginBundle::LEONT::Base;
 {
-  $Dist::Zilla::PluginBundle::LEONT::Base::VERSION = '0.001';
+  $Dist::Zilla::PluginBundle::LEONT::Base::VERSION = '0.002';
 }
 use strict;
 use warnings;
-
-use Dist::Zilla::PluginBundle::Git;
 
 use Moose;
 use Dist::Zilla;
@@ -22,6 +20,7 @@ Git::NextVersion
 
 PodWeaver
 PkgVersion
+InstallGuide
 
 PodSyntaxTests
 PodCoverageTests
@@ -55,7 +54,7 @@ Dist::Zilla::PluginBundle::LEONT::Base - Plugins LeonT uses regardless of build 
 
 =head1 VERSION
 
-version 0.001
+version 0.002
 
 =head1 DESCRIPTION
 
