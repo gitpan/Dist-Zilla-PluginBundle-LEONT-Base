@@ -1,6 +1,6 @@
 package Dist::Zilla::PluginBundle::LEONT::Base;
 {
-  $Dist::Zilla::PluginBundle::LEONT::Base::VERSION = '0.002';
+  $Dist::Zilla::PluginBundle::LEONT::Base::VERSION = '0.003';
 }
 use strict;
 use warnings;
@@ -54,7 +54,7 @@ Dist::Zilla::PluginBundle::LEONT::Base - Plugins LeonT uses regardless of build 
 
 =head1 VERSION
 
-version 0.002
+version 0.003
 
 =head1 DESCRIPTION
 
