@@ -1,6 +1,6 @@
 package Dist::Zilla::PluginBundle::LEONT::Base;
 {
-  $Dist::Zilla::PluginBundle::LEONT::Base::VERSION = '0.003';
+  $Dist::Zilla::PluginBundle::LEONT::Base::VERSION = '0.004';
 }
 use strict;
 use warnings;
@@ -24,7 +24,6 @@ InstallGuide
 
 PodSyntaxTests
 PodCoverageTests
-Test::Kwalitee
 Test::Compile
 
 NextRelease
@@ -38,6 +37,7 @@ sub configure {
 	my $self = shift;
 
 	$self->add_plugins(@plugins);
+	$self->add_plugins([ ('Test::Kwalitee') x 2, $self->config_slice({skip_kwalitee => 'skiptest' })]);
 	$self->add_bundle("\@$_") for @bundles;
 	return;
 }
@@ -54,7 +54,7 @@ Dist::Zilla::PluginBundle::LEONT::Base - Plugins LeonT uses regardless of build 
 
 =head1 VERSION
 
-version 0.003
+version 0.004
 
 =head1 DESCRIPTION
 
