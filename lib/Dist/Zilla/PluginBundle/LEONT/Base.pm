@@ -1,13 +1,13 @@
 package Dist::Zilla::PluginBundle::LEONT::Base;
 {
-  $Dist::Zilla::PluginBundle::LEONT::Base::VERSION = '0.004';
+  $Dist::Zilla::PluginBundle::LEONT::Base::VERSION = '0.005';
 }
 use strict;
 use warnings;
 
 use Moose;
 use Dist::Zilla;
-with 'Dist::Zilla::Role::PluginBundle::Easy';
+with qw/Dist::Zilla::Role::PluginBundle::Easy Dist::Zilla::Role::PluginBundle::PluginRemover Dist::Zilla::Role::PluginBundle::Config::Slicer/;
 
 my @plugins = qw/
 AutoPrereqs
@@ -27,7 +27,6 @@ PodCoverageTests
 Test::Compile
 
 NextRelease
-Signature
 CheckChangesHasContent
 /;
 
@@ -50,11 +49,11 @@ sub configure {
 
 =head1 NAME
 
-Dist::Zilla::PluginBundle::LEONT::Base - Plugins LeonT uses regardless of build system
+Dist::Zilla::PluginBundle::LEONT::Base
 
 =head1 VERSION
 
-version 0.004
+version 0.005
 
 =head1 DESCRIPTION
 
@@ -77,7 +76,6 @@ Some plugins LEONT uses. It is equivalent to:
     [Test::Compile]
     
     [NextRelease]
-    [Signature]
     [CheckChangesHasContent]
     [@Git]
 

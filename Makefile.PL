@@ -43,12 +43,14 @@ my %WriteMakefileArgs = (
     "Dist::Zilla::Plugin::Test::Compile" => 0,
     "Dist::Zilla::Plugin::Test::Kwalitee" => 0,
     "Dist::Zilla::PluginBundle::Git" => 0,
+    "Dist::Zilla::Role::PluginBundle::Config::Slicer" => 0,
     "Dist::Zilla::Role::PluginBundle::Easy" => 0,
+    "Dist::Zilla::Role::PluginBundle::PluginRemover" => 0,
     "Moose" => 0,
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "0.004",
+  "VERSION" => "0.005",
   "test" => {
     "TESTS" => "t/*.t"
   }

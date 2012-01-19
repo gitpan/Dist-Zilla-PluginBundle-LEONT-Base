@@ -1,5 +1,9 @@
 Revision history for Dist-Zilla-PluginBundle-LEONT-Base
 
+0.005     2012-01-19 01:48:20 Europe/Amsterdam
+          Added RemovePlugin and ConfigSlicer to roleset
+          Removed Signature from plugin list
+
 0.004     2011-10-05 17:49:25 Europe/Amsterdam
           Added a skip_kwalitee option to disable specific kwalitee tests
 
