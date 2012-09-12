@@ -1,6 +1,6 @@
 package Dist::Zilla::PluginBundle::LEONT::Base;
 {
-  $Dist::Zilla::PluginBundle::LEONT::Base::VERSION = '0.005';
+  $Dist::Zilla::PluginBundle::LEONT::Base::VERSION = '0.006';
 }
 use strict;
 use warnings;
@@ -12,7 +12,6 @@ with qw/Dist::Zilla::Role::PluginBundle::Easy Dist::Zilla::Role::PluginBundle::P
 my @plugins = qw/
 AutoPrereqs
 MetaJSON
-MetaResources
 Repository
 Bugtracker
 MinimumPerl
@@ -36,7 +35,6 @@ sub configure {
 	my $self = shift;
 
 	$self->add_plugins(@plugins);
-	$self->add_plugins([ ('Test::Kwalitee') x 2, $self->config_slice({skip_kwalitee => 'skiptest' })]);
 	$self->add_bundle("\@$_") for @bundles;
 	return;
 }
@@ -49,11 +47,11 @@ sub configure {
 
 =head1 NAME
 
-Dist::Zilla::PluginBundle::LEONT::Base
+Dist::Zilla::PluginBundle::LEONT::Base - Plugins LeonT uses regardless of build system
 
 =head1 VERSION
 
-version 0.005
+version 0.006
 
 =head1 DESCRIPTION
 

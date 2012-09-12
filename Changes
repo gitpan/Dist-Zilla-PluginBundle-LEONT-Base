@@ -1,5 +1,10 @@
 Revision history for Dist-Zilla-PluginBundle-LEONT-Base
 
+0.006     2012-09-12 20:34:41 Europe/Amsterdam
+          Remove [Test::Kwalitee] from bundle
+          Remove MetaResources from Pluginbundle
+          Remove [Signature] from dependency list
+
 0.005     2012-01-19 01:48:20 Europe/Amsterdam
           Added RemovePlugin and ConfigSlicer to roleset
           Removed Signature from plugin list
